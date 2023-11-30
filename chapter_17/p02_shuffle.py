@@ -1,8 +1,8 @@
-import random
+import secrets
 
 
 def random_number_generator(lower, higher):
-    return lower + int(random.random() * (higher - lower + 1))
+    return lower + int(secrets.SystemRandom().random() * (higher - lower + 1))
 
 
 def shuffle_list_recursively(cards, current_index):

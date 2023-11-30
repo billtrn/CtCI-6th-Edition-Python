@@ -1,5 +1,5 @@
 import enum
-import random
+import secrets
 
 
 class Gender(enum.Enum):
@@ -8,7 +8,7 @@ class Gender(enum.Enum):
 
 
 def simulate_child() -> Gender:
-    return random.choice([Gender.BOY, Gender.GIRL])
+    return secrets.SystemRandom().choice([Gender.BOY, Gender.GIRL])
 
 
 class Family:

@@ -1,7 +1,7 @@
 import unittest
-from random import randrange
 
 import pytest
+import secrets
 
 
 class Vehicle:
@@ -65,7 +65,7 @@ class ParkZone:
         return token
 
     def generate_token(self):
-        return randrange(1111, 9999)
+        return secrets.SystemRandom().randrange(1111, 9999)
 
     def depark(self, token):
         if token in self.parked:

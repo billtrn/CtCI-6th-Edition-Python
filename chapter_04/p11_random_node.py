@@ -1,5 +1,5 @@
-import random
 from collections import defaultdict
+import secrets
 
 
 class Node:
@@ -100,7 +100,7 @@ class BinarySearchTree:
         while current:
             choices = ["self", "left", "right"]
             choice_weights = [1, current.left_size, current.right_size]
-            decision = random.choices(choices, choice_weights)[0]
+            decision = secrets.SystemRandom().choices(choices, choice_weights)[0]
 
             if decision == "self":
                 return current

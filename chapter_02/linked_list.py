@@ -1,4 +1,4 @@
-import random
+import secrets
 
 
 class LinkedListNode:
@@ -60,7 +60,7 @@ class LinkedList:
 
     @classmethod
     def generate(cls, k, min_value, max_value):
-        return cls(random.choices(range(min_value, max_value), k=k))
+        return cls(secrets.SystemRandom().choices(range(min_value, max_value), k=k))
 
 
 class DoublyLinkedList(LinkedList):

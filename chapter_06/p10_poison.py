@@ -1,5 +1,5 @@
-import random
 from typing import List, Optional
+import secrets
 
 DAYS_FOR_RESULT = 7
 
@@ -64,7 +64,7 @@ def find_poison(world: World) -> int:
 
 
 def test_find_poison():
-    poisoned_bottle_num = random.randrange(1000)
+    poisoned_bottle_num = secrets.SystemRandom().randrange(1000)
     world = World(
         num_bottles=1000, num_test_strips=10, poisoned_bottle_num=poisoned_bottle_num
     )
