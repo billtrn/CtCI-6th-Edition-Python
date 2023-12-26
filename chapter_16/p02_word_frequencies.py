@@ -29,8 +29,7 @@ def get_frequency_single_query(book, word):
     for book_word in book.split():
         # make lowercase, remove punctuation
         book_word = book_word.lower()
-        book_word = book_word.translate(str.maketrans("", "", string.punctuation))
-        if book_word == word:
+        if (book_word := book_word.translate(str.maketrans("", "", string.punctuation))) == word:
             count += 1
     return count
 

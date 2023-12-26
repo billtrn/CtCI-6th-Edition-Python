@@ -12,8 +12,7 @@ class MinStack(Stack):
             self.minvals.push(value)
 
     def pop(self):
-        value = super().pop()
-        if value == self.minimum():
+        if (value := super().pop()) == self.minimum():
             self.minvals.pop()
         return value
 

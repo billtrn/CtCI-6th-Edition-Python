@@ -36,8 +36,7 @@ def test_in_order_successor():
 
     for x, y in zip(inputs, outputs):
         test = bst.get_node(x)
-        succ = in_order_successor(test)
-        if succ is not None:
+        if (succ := in_order_successor(test)) is not None:
             assert succ.key == y
         else:
             assert succ == y

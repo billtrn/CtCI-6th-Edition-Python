@@ -8,8 +8,7 @@ def is_palindrome_permutation(phrase):
     table = [0 for _ in range(ord("z") - ord("a") + 1)]
     countodd = 0
     for c in phrase:
-        x = char_number(c)
-        if x != -1:
+        if (x := char_number(c)) != -1:
             table[x] += 1
             if table[x] % 2:
                 countodd += 1

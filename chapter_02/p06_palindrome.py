@@ -16,9 +16,8 @@ def is_palindrome(ll):
         slow = slow.next
 
     while slow:
-        top = stack.pop()
 
-        if top != slow.value:
+        if (top := stack.pop()) != slow.value:
             return False
 
         slow = slow.next

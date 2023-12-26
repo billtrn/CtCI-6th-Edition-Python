@@ -100,9 +100,8 @@ class BinarySearchTree:
         while current:
             choices = ["self", "left", "right"]
             choice_weights = [1, current.left_size, current.right_size]
-            decision = random.choices(choices, choice_weights)[0]
 
-            if decision == "self":
+            if (decision := random.choices(choices, choice_weights)[0]) == "self":
                 return current
 
             if decision == "left":

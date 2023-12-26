@@ -60,8 +60,7 @@ def get_in_words(n):
 
     while n > 0:
         temp = n % 1000
-        res = get_chunks(temp)
-        if res:
+        if res := get_chunks(temp):
             int_in_words = res + [threes[index]] + int_in_words
         index += 1
         n //= 1000
